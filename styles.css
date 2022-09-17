@@ -1,0 +1,70 @@
+*{ border: 2px solid red;
+}
+body{
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+#heading{
+    display: block;
+    text-align: center;
+}
+#calc-container{
+    border: 1px solid white;
+    background-color: tan;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3),
+                -2px -2px 2px rgba(255, 255, 255, 0.3);
+    width: 250px;
+    margin-top: 100px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#screen {
+    border: 1px solid black;
+    text-align: right;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 30px;
+
+}
+.calc-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px  1px 1px rgba(0, 0, 0, 0.2),
+                -1px -1px 1px rgba(255, 255, 255, 0.9);
+
+    border: 1px solid black;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    }
+.calc-buttons.clear:active{
+    background-color: red;
+}
+.calc-buttons.action:active{
+    background-color: blue;
+}
+.calc-buttons.numbers:active{
+    background-color: rgb(190, 187, 187);
+}
+
+
+.button-container{
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    gap: 5px;
+    padding: 10px;
+    margin: auto;
+    justify-content: center;
+    max-width: 250px;
+    max-height: 400px;
+}
+.one{
+    border-radius: 50px;
+    height: 50px;
+}
