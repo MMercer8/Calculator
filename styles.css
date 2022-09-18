@@ -1,4 +1,4 @@
-*{ border: 2px solid red;
+*{ 
 }
 body{
     background-color: gray;
@@ -13,21 +13,24 @@ body{
 }
 #calc-container{
     border: 1px solid white;
-    background-color: tan;
+    background-color: rgb(150, 135, 115);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3),
                 -2px -2px 2px rgba(255, 255, 255, 0.3);
     width: 250px;
-    margin-top: 100px;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 100px;
     margin-bottom: 20px;
 }
 
+#heading {
+    font-size: 75px;
+}
 #screen {
     border: 1px solid black;
     text-align: right;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-bottom: 10px;
+    padding-right: 10px;
     font-size: 30px;
 
 }
@@ -44,15 +47,22 @@ body{
     height: 50px;
     }
 .calc-buttons.clear:active{
-    background-color: red;
+    background-color: rgb(215, 77, 77);
 }
 .calc-buttons.action:active{
-    background-color: blue;
+    background-color: rgb(97, 97, 186);
 }
 .calc-buttons.numbers:active{
-    background-color: rgb(190, 187, 187);
+    background-color: rgb(130, 216, 195);
 }
 
+.calc-buttons.other:active {
+    background-color: rgb(33, 79, 33);
+}
+
+.calc-buttons.delete:active {
+    background-color: rgb(146, 108, 74);
+}
 
 .button-container{
     display: grid;
@@ -68,3 +78,4 @@ body{
     border-radius: 50px;
     height: 50px;
 }
+
