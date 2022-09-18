@@ -55,9 +55,19 @@ function deleteNum() {
 
 
 function toPercentage() {
+    console.log(first + second);
     let temps = parseFloat(screen.textContent);
     temps /= 100;
-    screen.textContent = temps;
+    screen.textContent = temps.toString();
+    if (setFirst) {
+        first = parseInt(temps);
+        setFirst = false;
+        setSecond = true;
+    } else if (setSecond) {
+        second = parseInt(temps);
+       
+    }
+    console.log(first + second);
 }
 
 function changeSign() {
@@ -120,7 +130,6 @@ function setOperator(){
 
 function setNumber(){
     let num = this.textContent;
-    console.log("setting num: " + num);
     screen.textContent = num;
 }
 
@@ -137,6 +146,9 @@ function multiply(a, b){
 }
 
 function divide(a, b) {
+    if(b == 0) {
+        return "NOPE!";
+    }
     return a / b;
 }
 
@@ -160,11 +172,6 @@ function updateAnswer() {
         case "/":
             answer = divide(first, second);
             break;
-        case "%":
-            screen.textContent = "FUCK YOU";
-            break;
-        
-            
     }
     screen.textContent = answer;
     first = answer;
@@ -174,3 +181,10 @@ function updateAnswer() {
     answer = 0;
 }
 
+function test() {
+    console.log("setfirst: " + setFirst + " set 2: " + setSecond);
+
+    console.log("first: " + first + " second: " + second);
+
+}
+test();
